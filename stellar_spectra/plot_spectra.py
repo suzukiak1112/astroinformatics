@@ -15,7 +15,6 @@ if __name__=='__main__':
     gs1 = gridspec.GridSpec(3,4)
     gs1.update(left=0.1,right=0.95,wspace=0.18,hspace=0.18,top=0.95)
     
-    
     # plotting first 12 spectra
     for n in range(12):
         ax = plt.subplot(gs1[n])
@@ -27,6 +26,7 @@ if __name__=='__main__':
             ax.set_xlabel(r"$\lambda\ [\AA]$")
         if n%4 == 0:
             ax.set_ylabel(r"$F_\lambda/F_{5550\AA}$")
+        ax.set_ylim(bottom=0.0)
     plt.savefig("miles_spectra.pdf",dpi=400)
     plt.show()
 
