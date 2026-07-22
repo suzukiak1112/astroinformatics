@@ -1,10 +1,6 @@
 import numpy as np
 from astropy.io import fits
-import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
 from pathlib import Path
-import numpy as np
-from astropy.io import fits
 
 class miles_data:
 
@@ -29,7 +25,8 @@ class miles_data:
                 feh = line[85:90].strip()
 
                 # skipping inappropriate lines
-                if filename == "" or teff == "----" or logg == "----" or feh == "----":
+                if filename == "" or teff == "----" \
+                                  or logg == "----" or feh == "----":
                     continue
 
                 self.catalog.append (
@@ -114,6 +111,7 @@ class miles_data:
             filenames,
         )
  
+
     def __len__(self):
         return len(self.catalog)
     
