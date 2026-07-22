@@ -20,7 +20,6 @@ if __name__=='__main__':
     ax.plot(epochs, train_loss, "-",color="blue",label="training loss")
     ax.set_xlabel("epoch")
     ax.set_ylabel("loss")
-    #ax.set_yscale("log")
     ax.set_xlim(left=0.0)
     ax.set_ylim(bottom=0.0)
     ax.legend(frameon=False, loc="upper right")
