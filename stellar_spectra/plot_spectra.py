@@ -11,9 +11,7 @@ if __name__=='__main__':
 
     # plot parameters
     plt.rcParams['figure.figsize']=[32.0/2.54, 16.0/2.54]
-    plt.rcParams['font.size']=14
     gs1 = gridspec.GridSpec(3,4)
-    gs1.update(left=0.1,right=0.95,wspace=0.18,hspace=0.18,top=0.95)
     
     # plotting first 12 spectra
     for n in range(12):
